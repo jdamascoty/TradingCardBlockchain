@@ -1,7 +1,7 @@
 # TradingCardBlockchain
 
 A simple blockchain web application based on trading cards.
-This was done using the Angular CLI frameowkr and written in TypeScript.
+This was done using the Angular CLI framework and written in TypeScript.
 
 ## Development server
 
