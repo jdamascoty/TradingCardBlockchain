@@ -1,0 +1,34 @@
+.div-main{
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockchain-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blockchain-options {
+  margin-right:10px;
+  margin-bottom: 20px;
+}
+
+.example-card {
+  width: 50%; /* or try width: 100vw; */
+  background-color: darksalmon;
+}
+
+.card-content{
+  word-wrap: break-word;
+}
+
+.card-block-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

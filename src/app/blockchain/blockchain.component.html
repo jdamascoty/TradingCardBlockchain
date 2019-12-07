@@ -1,0 +1,41 @@
+<h2 class="blockchain-header" >Trading Card Tracker: A Simple Blockchain Web App</h2>
+<p class="blockchain-header" >By: Jessica Damasco Ty and Martin Sarmiento</p>
+
+
+
+<div class="div-main">
+  <button class="blockchain-options" mat-raised-button type="submit" color="primary" (click)="openAddBlockPopUpDialog()"><h4>Add a Block</h4></button>
+  <button class="blockchain-options" mat-raised-button type="submit" color="primary" (click)="onDeleteLastBlock()"><h4>Delete Latest Block</h4></button>
+  <button class="blockchain-options" mat-raised-button type="submit" color="primary" (click)="onDeleteAllBlocks()"><h4>Delete All Blocks</h4></button>
+</div>
+
+<br>
+
+
+  <div *ngFor="let blocks of blockchain" class="card-block-container">
+    <mat-card class="example-card" id=block{{blocks.blockId}}>
+      <mat-card-title>Card Block {{blocks.blockId + 1}}</mat-card-title>
+      <mat-divider></mat-divider>
+      <br>
+      <mat-card-content class="card-content">
+        <mat-list-item><b>Block Parent: </b>{{blocks.blockParent}}</mat-list-item>
+        <br>
+        <mat-list-item><b>User: </b>{{blocks.user}}</mat-list-item>
+        <br>
+        <mat-list-item><b>Card ID: </b>{{blocks.cardId}}</mat-list-item>
+        <mat-list-item><b>Card: </b>{{blocks.card}}</mat-list-item>
+        <br>
+        <mat-list-item><b>Hash: </b>{{blocks.blockHash}}</mat-list-item>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="onClickedValidate(this.$event)" color="primary" id={{blocks.blockId}}>Validate</button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+  </div>
+
+
+
+
+
+

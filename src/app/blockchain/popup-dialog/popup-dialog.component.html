@@ -1,0 +1,31 @@
+<mat-dialog-content>
+    <h3>
+      {{message}}
+    </h3>
+  </mat-dialog-content>
+
+  <h4> User </h4>
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="User" [(ngModel)]="data.user">
+  </mat-form-field>
+  <br>
+
+  <h4> Card </h4>
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Card" [(ngModel)]="data.card">
+  </mat-form-field>
+
+  <h4> Card ID</h4>
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Card ID" [(ngModel)]="data.cardId">
+  </mat-form-field>
+
+
+  <mat-dialog-actions align="center">
+    <button mat-raised-button
+            (click)="onConfirmClick()">{{cancelButtonText}}</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data"
+              tabindex="1">{{confirmButtonText}}</button>
+  </mat-dialog-actions>
+
+
